@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Presentacion</title>
+    <style>
+        body {
+            background-image: url("azul.jpg");
+            background-size: cover;
+        }
+
+        .container {
+            background-color: rgb(236, 204, 210);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <h1>MI PRESENTACIÓN <3 </h1>
+        </div>
+    </center>
+    
+    <center>
+        <p>Abril Garcia Bustos</p> 
+        <p>Desarrollo de software multiplataforma 2:B</p>
+        <p>20223TN053</p>
+        <p>Me gustan mucho los gatos y los perros</p>
+        <p>Tecnico en programacion</p>
+        <p>Mis pasatiempos son ver peliculas de amor y escuchar musica</p>
+    </center>
+  
+    <center>
+        <img id="imagen" src="imagen.jpg" alt="Imagen 1">
+    </center>
+  
+    <center>
+        <button onclick="anterior()">Regresar Imagen</button>
+        <button onclick="siguiente()">Siguiente Imagen</button>
+    </center>
+  
+    <script>
+        var imagenes = ["imagen1.jpeg", "imagen2.jpg", "imagen3.jpg", "imagen4.jpg", "imagen5.jpg"];
+        var indice = 0;
+        var imagenElement = document.getElementById("imagen");
+        
+        function siguiente() {
+            indice++;
+            if (indice >= imagenes.length) {
+                indice = 0;
+            }
+            imagenElement.src = imagenes[indice];
+        }
+        
+        function anterior() {
+            indice--;
+            if (indice < 0) {
+                indice = imagenes.length - 1;
+            }
+            imagenElement.src = imagenes[indice];
+        }
+    </script>
+</body>
+</html>
